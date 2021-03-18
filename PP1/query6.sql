@@ -1,9 +1,0 @@
-WITH user AS (
-	SELECT UserID
-	FROM Seller
-	INTERSECT 
-	SELECT UserID
-	FROM Bidder
-)
-SELECT COUNT(DISTINCT UserID)
-FROM user;
