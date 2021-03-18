@@ -1,0 +1,9 @@
+WITH user AS (
+	SELECT UserID 
+	FROM Seller
+	UNION 
+	SELECT UserID 
+	FROM Bidder
+)
+SELECT COUNT(DISTINCT UserID)
+FROM user;
